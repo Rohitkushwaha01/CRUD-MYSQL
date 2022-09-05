@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const https = require('https');
-const mysql = require('mysql')
+const mysql = require('mysql');
 
 const app = express();
 
@@ -16,33 +16,31 @@ let connection = mysql.createConnection({
     user: 'root',
     password: 'Rony@123',
     database: 'DPU'
-})
+});
 
 app.get('/', function(req, res){
-
-    
-    res.render('home')
+    res.render('home');
 });
 
 app.post('/create', function(req, res){
     connection.connect(function(){
         if(err)throw err;
         console.log("Connected");
-    })
-})
+    });
+});
 
 app.get('/create', function(req, res){
-    res.render('create')
-})
+    res.render('create');
+});
 
 app.get('/Update', function(req, res){
-    res.render('update')
-})
+    res.render('update');
+});
 
 app.get('/delete', function(req, res){
-    res.render('delete')
-})
+    res.render('delete');
+});
 
 app.listen('3000', function(){
-    console.log("Server is running on port 3000")
-})
+    console.log("Server is running on port 3000");
+});
