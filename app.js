@@ -16,32 +16,18 @@ app.use(body.urlencoded({ extended: true }));
 let connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'YourPassword',
+    password: 'Rony@123',
     database: 'DPU'
-});
+})
 
 app.get('/', function(req, res){
-<<<<<<< HEAD
     res.render('home')
 });
 
-=======
-    res.render('home');
-});
-
-app.post('/create', function(req, res){
-    connection.connect(function(){
-        if(err)throw err;
-        console.log("Connected");
-    });
-});
-
->>>>>>> 03949dd111247060ba938377d5128737bdb31a1c
 app.get('/create', function(req, res){
     res.render('create');
 });
 
-<<<<<<< HEAD
 app.post('/create', function(req, res){
     fnameArray.push(req.body.fname);
     lnameArray.push(req.body.lname);
@@ -70,16 +56,3 @@ app.listen('3000', function(){
 // app.get('/delete', function(req, res){
 //     res.render('delete')
 // })
-=======
-app.get('/Update', function(req, res){
-    res.render('update');
-});
-
-app.get('/delete', function(req, res){
-    res.render('delete');
-});
-
-app.listen('3000', function(){
-    console.log("Server is running on port 3000");
-});
->>>>>>> 03949dd111247060ba938377d5128737bdb31a1c
