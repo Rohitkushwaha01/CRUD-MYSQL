@@ -1,0 +1,23 @@
+<%- include('partials/header') %> 
+
+<div class="table">
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </tr>
+        <tr>
+            <% fnameArray.forEach(function(e){ %>
+                <td><%=e %></td> 
+            <% }) %>
+        </tr>
+        <tr>
+            <% lnameArray.forEach(function(e){ %>
+                <td><%=e %></td> 
+            <% }) %>
+        </tr>
+        
+    </table>
+</div>
+
+<%- include('partials/footer') %> 
